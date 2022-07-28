@@ -1,21 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos.css">
-    <title>Document</title>
+    <meta name="description" content="Guias de lectura de comics de Marvel, DC y muchos mas!">
+    <meta name="keywords" content="GUIA, ORDEN, LECTURA, COMICS, ISSUES, MARVEL, DC, VENGADORES, BATMAN">
+    <title>La baticueva</title>
+    <link rel="shortcut icon" href="./assets/logobatman.png">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <h1>este es un titulo</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nemo nihil voluptate! Quae facere fugit error. Vel nostrum dolore minus perferendis facilis aliquid cupiditate tempora non commodi deleniti, nam dicta. </p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum earum ex saepe dignissimos necessitatibus placeat. Beatae illum nam, omnis id culpa mollitia earum tenetur veritatis, cum eaque dolorem, facere modi?</p>
+    <div class="contenedorGrid">
+
+        <!-- BANNER -->
+        <a  href="index.html"><img class="imagenPrincipal" src="./assets/imagenprincipal.png" alt="logo"></a>
+
+        <!-- COMIENZA EL HEADER -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark colorb">
+                <div class="container-fluid">
+
+                    <a class="imagenP" href="#"><img class="imagenPagina" src="./assets/logopaginapng.png" alt="logopagina"></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link hvr-overline-from-center" aria-current="page" href="./index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-overline-from-center" aria-current="page" href="./paginas/marvel.html">MARVEL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-overline-from-center" aria-current="page" href="./paginas/dc.html">DC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-overline-from-center" aria-current="page" href="./paginas/otros.html">OTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-overline-from-center" aria-current="page" href="./paginas/contacto.html">CONTACTANOS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link suscripcion" aria-current="page" href="./paginas/suscripcion.html">SUSCRIBITE</a>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <!-- TERMINA EL HEADER -->
+
+
+        <!-- COMIENZA EL MAIN -->
+        <main class="main">
+            <section class="mt-2">
+                <div class="contenedorTitulo">
+                    <h1 class="titulo">!BIENVENIDOS A LA BATICUEVA!</h1>
+                </div>
+                <p class="mt-4">El objetivo de este sitio es ser el recurso más extenso de comics en español en internet. Proporcionaremos ordenes de lecturas para personajes y eventos de Marvel, DC y otras editoriales, noticias del mundo comic y reseñas de los mejores comics. Ser un nuevo lector y ver la enorme cantidad de comics que existen puede ser desalentador. Debido a eso recomendaremos y ordenaremos distintas etapas para que su experiencia de lectura de comics sea más sencilla y agradable. 
+                </p>
+
+            </section>
+
+            <section class="mt-5">
+                <h2 class="tituloSecundario">GUIA DE LECTURAS</h2>
+                <p class="mt-4">¡En nuestro sitio web podrás encontrar distintos universos de comics para que puedas empezar con el que más te guste! Las hacemos con el propósito de que leer comics no sea una tarea frustrante y cansadora debido a la enorme cantidad que existen de ellos. Nuestro sitio está enfocado principalmente en comics de Marvel y DC, pero podrás encontrar otras variantes para los que no son amantes de estas empresas y quieran algo más sencillo para leer. A medida que nuestro sitio web se vaya desarrollando iremos agregando distintos tipos de guías de lecturas, no te olvides que puedes sugerir alguna en particular en la página de contacto. </p>
+            </section>
+
+            <!--  COMIENZA EL CAROUSEL -->
+            <section class="container mb-5 mt-5 w-75">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="./assets/capitan-america-carousel.jpg" class="d-block w-100" alt="imagenCarrusel">
+                        </div>
+                        <div class="carousel-item active">
+                            <img src="./assets/batman- carousel.jpg" class="d-block w-100" alt="imagenCarrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/invincible-carousel.jpg" class="d-block w-100" alt="imagenCarrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/watchmen-carousel.jpg" class="d-block w-100" alt="imagenCarrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/avengers-carousel.jpg" class="d-block w-100" alt="imagenCarrusel">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <!-- TERMINA EL CAROUSEL -->
+
+
+
+            <section>
+                <h2 class="tituloSecundario"> RESEÑAS</h2>
+                <p class="mt-4">Además de brindar distintas guías de lecturas tambien podrás encontrar reseñas de los mejores comics que hay en nuestras guías de lecturas en cada respectiva página. Estas reseñas son realizadas de manera personal, cada persona puede ver de distintos tipos de formas los comics. </p>
+
+
+                <!-- CARDS -->
+                <div class="card-group ">
+
+                    <div class="card bg-transparent m-2 border border-dark ">
+                        <img src="./assets/avengers-carousel.jpg" class="card-img-top " alt="reseña marvel">
+                        <div class="card-body ">
+                            <h5 class="card-title">UNIVERSO MARVEL<span class="badge bg-secondary m-2">New</span></h5>
+                            <p class="card-text cardReseña">El universo Marvel es uno de los más extensos que existen en cuanto a comics. Este universo se destaca por la enorme cantidad de distintas series de personajes por la cual podrás empezar por la que más te guste. </p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-transparent m-2 border border-dark">
+                        <img src="./assets/batman- carousel.jpg" class="card-img-top" alt="reseña batman">
+                        <div class="card-body">
+                            <h5 class="card-title">UNIVERSO DC<span class="badge bg-secondary m-2">New</span> </h5>
+                            <p class="card-text cardReseña">El universo de DC se destaca principalmente por un personaje y nuestro favorito, Batman. A diferencia de Marvel en el universo de DC podrás encontrar historias con un tono más adulto. </p>
+                        </div>
+                    </div>
+                    <div class="card bg-transparent m-2 border border-dark">
+                        <img src="./assets/watchmen-carousel.jpg" class="card-img-top" alt="reseña otros">
+                        <div class="card-body">
+                            <h5 class="card-title">OTROS UNIVERSOS<span class="badge bg-secondary m-2">New</span> </h5>
+                            <p class="card-text cardReseña">No todo en la vida es Marvel y DC, existen muchos otros universos muy famosos y de calidad que se destacan a comparación de los anteriores por tener un inicio y un final, por tener libertad sin tener que seguir una continuidad, y por no ser siempre de superhéroes. </p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+        <!-- TERMINA EL MAIN -->
+
+
+
+        <!-- COMIENZA EL FOOTER -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-xs-12 d-flex justify-content-center aling-items-center">
+                        <p>Todos los derechos reservados</p>
+                    </div>
+
+                    <div class="col-xs-12 d-flex justify-content-center aling-items-center ">
+                        <img src="./assets/book-open.svg" alt="logo comic">
+                        <img src="./assets/instagram.svg" alt="logo instagram">
+                        <img src="./assets/twitter.svg" alt="logo twitter">
+                        <img src="./assets/facebook.svg" alt="logo facebook">
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+        <!-- TERMINA EL FOOTER -->
+
+    </div>
+
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"> </script>
 
    <!--  <script src="./js/1.clase1.js"></script> -->
    <!--  <script src="./js/2clase2y3.js"></script> -->
    <!-- <script src="./js/4.ejercicios.js"></script> -->
    <!-- <script src="./js/5.desafio.comple.1.js"></script> -->
-   <script src="./js/6.clase4y5.js"></script>
+   <!-- <script src="./js/6.clase4y5.js"></script> -->
+   <!-- <script src="./js/7.desafio.entregable.1.js"></script> -->
 </body>
+
 </html>

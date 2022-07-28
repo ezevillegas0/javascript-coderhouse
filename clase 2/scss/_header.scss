@@ -1,0 +1,62 @@
+/* estilos header */
+
+
+.imagenPrincipal {
+    grid-area: imagenPrincipal;
+    border-radius: 0.9rem;
+	@include sizes (100%, 100%);
+}
+
+.imagenPagina{
+	
+	@include sizes(100%, 100%);
+
+}
+
+.imagenP{
+	@include sizes(25%, 100%);
+
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(190, 190, 190);
+    padding: 2rem 0;
+    position: sticky;
+    border-radius: 0.6rem;
+    a {
+        font-weight: bold;
+    }
+}
+
+
+.div {
+	ul {
+		li {
+			a {
+				padding: 0.5rem 0.6rem;
+				transition: all 0.4s linear;
+			}
+		}
+	}
+}
+div {
+	ul {
+		li {
+			a {
+				&:hover {
+					background: gray;
+					border-radius: 5px;
+					padding: 0.5rem 0.6rem;
+					transition: all 0.4s linear;
+				}
+			}
+		}
+	}
+}
+
+
+.colorb {
+    background-color: rgb(190, 190, 190);
+
+}

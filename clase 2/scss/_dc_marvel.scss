@@ -1,0 +1,62 @@
+ 
+/* DC */
+
+.contenedorDC{
+    display: flex;
+    justify-content: space-between;
+}
+
+.batman{
+    display: block;
+    @include sizes(50%, 50%);
+}
+
+
+
+/* marvel */
+
+.spiderman {
+    display: block;
+    animation: spiderman 6s infinite;
+    @include sizes(20%, 20%);
+}
+
+.contenedorMarvel {
+    display: flex;
+    justify-content: space-between;
+    img{
+        margin: auto 4rem;
+        overflow: hidden;
+        @include sizes(15.6rem, 28rem);
+    }
+}
+
+
+/*animacion spiderman*/
+
+@keyframes spiderman {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    30% {
+        transform: translateY(0) rotate(10deg);
+
+    }
+
+    50% {
+        transform: rotate(-10deg);
+
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
+
+
+
+}

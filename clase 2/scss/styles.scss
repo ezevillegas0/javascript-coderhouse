@@ -1,0 +1,218 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import "_variables";
+@import "_hover";
+@import "_barrascroll";
+@import "_header";
+@import "_footer";
+@import "_dc_marvel";
+
+
+/* GENERALES */
+
+* {
+    margin:map-get($medidas, 0);
+    padding:map-get($medidas, 0);
+    box-sizing: border-box;
+
+}
+
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: map-get($medidas, 1fr);
+    grid-template-areas:
+        "imagenPrincipal"
+        "header"
+        "barraNavegacion"
+        "main"
+        "footer"
+
+}
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size:map-get($medidas, 16);
+    margin-left: 17%;
+    margin-right: 17%;
+    background-attachment: fixed;
+
+}
+
+body{
+    background-size: contain;
+    background-color: rgb(102, 100, 102);
+    background-image: url(../assets/captura_pantalla.png);
+	@include sizes(100%, 100%);
+}
+
+/* estilos generales */
+
+p {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.3rem;
+
+
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 2.25rem;
+
+}
+
+.tituloSecundario {
+    text-align: center;
+    font-size: 1.56rem;
+
+}
+
+
+/* MAIN */
+
+.main {
+    grid-area: main;
+    background-color: #686668;
+    padding-top: map-get($medidas, 2rem);
+    padding-bottom: map-get($medidas, 2rem);
+    border-radius: 0.6rem;
+}
+
+
+
+/* media queries */
+
+
+
+/* 500px-768 */
+@media screen and (min-width:500px) and (max-width:768px) {
+	.header {
+		padding: 1rem 0;
+	}
+	.contenedorHeader {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.nombrePagina {
+		letter-spacing: 1rem;
+		font-size: 1rem;
+	}
+	.navegacion {
+		ul {
+			li {
+				a {
+					padding: 0.5rem 0.6rem;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.contenedorMarvel {
+		img {
+			margin: auto 2rem;
+			overflow: hidden;
+			@include sizes(11.7rem, 21rem);
+		}
+	}
+	.titulo {
+		font-size: 1.5rem;
+	}
+	p {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		font-size: 0.8rem;
+	}
+	.tituloSecundario {
+		font-size: 1rem;
+	}
+	.footer {
+		font-size: 0.6rem;
+		padding: 0.3rem;
+	}
+	.espacios {
+		font-size: 0.6rem;
+	}
+	.labelContacto {
+		font-size: 0.7rem;
+	}
+	.botonesContacto {
+		font-size: 0.6rem;
+	}
+	.cuadro {
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+		font-size: 1.3rem;
+	}
+	.contenedorImgagenDesunidos {
+		@include flex-center-center
+	}	
+	.imagenDesunidos {
+		border-radius: 1rem;
+		width: 50%;
+	}
+	.imagenP{
+		width: 30%;
+		
+	}
+	
+}
+
+/* 320-499px */
+@media screen and (min-width:320px) and (max-width:499px) {
+	
+
+	html {
+		font-size: 12px;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
+
+	.contenedorMarvel {
+		img {
+			margin: auto 2rem;
+			overflow: hidden;
+			@include sizes(11.7rem, 21rem);
+		}
+	}
+
+
+	.contenedorImgagenDesunidos {
+		@include flex-center-center
+	}
+
+	.imagenDesunidos{
+		border-radius: 1rem;
+		width: 50%;
+	}
+
+	.imagenP{
+		width: 50%;
+		
+	}
+
+
+}
+
+.cardReseña{
+	font-size: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

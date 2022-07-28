@@ -1,0 +1,2 @@
+//SIMULADOR INTERCATIVO
+alert("hola")

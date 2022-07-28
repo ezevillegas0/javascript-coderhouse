@@ -1,0 +1,14 @@
+.footer {
+    grid-area: footer;
+    background-color: rgb(190, 190, 190);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    text-align: center;
+    @include sizes(100%, auto);
+    
+}
+
+.barraNavegacionInferior {
+    text-align: center;
+
+}
