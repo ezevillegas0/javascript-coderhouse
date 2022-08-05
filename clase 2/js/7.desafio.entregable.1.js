@@ -1,4 +1,4 @@
-//SIMULADOR INTERCATIVO
+/* //SIMULADOR INTERCATIVO
 
 function elegirServicio(){
     //defino una clase para los datos necesesarios del servicio.
@@ -69,3 +69,4 @@ function elegirServicio(){
 
 elegirServicio();
 
+ */
