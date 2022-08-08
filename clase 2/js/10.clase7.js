@@ -392,19 +392,5 @@ console.log("El proceso tardó: " + (final - inicio) + " milisegundos")
 
 /* ---------------------------------------------------------------------- */
 
-//PRE-ENTREGA N° 1
-
-/* 
--Estructura HTML del proyecto. 
--Variables de JS necesarias. 
--Funciones esenciales del proceso a simular.
--Objetos de JS. 
--Arrays. 
--Métodos de búsqueda y filtrado sobre el Array. 
-*/
-
-//idea del proyecot final. no se evalua html ni css, se evalua el uso de condicionales, ciclos, objetos, arrys, etc. usar de manera adecuadra en base a nuestro proyecto. 
-
-//leer rubricas.
 
 

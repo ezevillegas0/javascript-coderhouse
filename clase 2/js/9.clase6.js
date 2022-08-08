@@ -1,6 +1,6 @@
                      //CLASE 6
 
-                     //ARRAYS
+                              //ARRAYS
 
 // es un tipo de dato que sirve para almacenar valores en forma de lista. esta lista empieza desde el 0.
 
