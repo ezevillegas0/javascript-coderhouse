@@ -253,7 +253,8 @@ for (const producto of productos) {
 
                        //EJEMPLO: OBJETOS, PRODUCTO Y ARRAY
 
-/* class Producto {
+/* 
+class Producto {
     constructor(nombre, precio) {
         this.nombre  = nombre.toUpperCase();
         this.precio  = parseFloat(precio);
