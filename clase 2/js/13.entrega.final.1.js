@@ -52,8 +52,11 @@ function comprarComics(){
             pedirComic = prompt("ingresa un comic")
             pedirComic= +pedirComic
         }
+        
         return pedirComic;
+        
     }
+    
 
     //seleccionar cuantos comics desea.
     function pedirCantidad(){
@@ -78,7 +81,7 @@ function comprarComics(){
     console.log("el precio de cada comic es de  " + precioComic)
 
     //calculo el precio con la cantidad.
-    let precioTotal = precioComic * pedirCantidad
+    let precioTotal = precioComic * pedirCantidad();
     parseInt(precioTotal)
 
     //genero una nueva orden con los datos ingresados.

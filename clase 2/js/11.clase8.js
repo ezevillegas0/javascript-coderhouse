@@ -6,7 +6,7 @@
 
 //La estructura de un documento HTML son las etiquetas. En el Modelo de Objetos del Documento (DOM), cada etiqueta HTML es un objeto, al que podemos llamar nodo. Las etiquetas anidadas son llamadas “nodos hijos” de la etiqueta “nodo padre” que las contiene.
 
-//u nodo es una etiqueta.
+//un nodo es una etiqueta.
 
 //Todos estos objetos son accesibles empleando JavaScript mediante el objeto global document.
 
@@ -30,6 +30,7 @@
 
                   //EJEMPLO: ACCESO POR OBJETO document
 /* 
+
 console.dir(document);
 console.dir(document.head)
 console.dir(document.body);
@@ -40,6 +41,7 @@ console.dir(document.body);
     <h2>Coder House</h2>
     <script src="js/main.js"></script>
 </body>
+
 */
 
 /* ---------------------------------------------------------------------- */
@@ -78,12 +80,14 @@ console.log(div.innerHTML);
 console.log(parrafo.innerHTML);
 */
 
+/* let div     = document.getElementById("app").innerHTML */
+/* let parrafo = document.getElementById("parrafo1").innerHTML */
+
 /* ---------------------------------------------------------------------- */
 
                 //GETELEMENTSBYCLASSNAME()
 
 //El método getElementsByClassName() sirve para acceder a un conjunto de elementos de la estructura HTML, utilizando su atributo class como identificación. Se retornará un Array de elementos con todas las coincidencias.
-
 /* 
 //CODIGO HTML DE REFERENCIA
 <ul>
@@ -134,7 +138,7 @@ let parrafo = document.querySelector("#contenedor p")
 let contenedor = document.querySelector("#contenedor")
 
 // o por clase:
-parrafo = document.querySelector(".texto")
+let parrafo = document.querySelector(".texto")
 */
 
 //también aplica a pseudo-clases de CSS, brindando un nivel más avanzado de precisión.
@@ -155,7 +159,7 @@ let radioChecked = document.querySelector(".radio:checked") */
 //EJEMPLO: RECORRE HTMLCollection CON FOR...OF
 
 /* 
-let paises       = document.getElementsByClassName("paises");
+let paises       = document.getElementsByClassName("pais");
 let contenedores = document.getElementsByTagName("div");
 
 for (const pais of paises) {
@@ -221,7 +225,7 @@ container.innerHTML = “<h2>Hola mundo!</h2>”
 // cambio el atributo class
 container.className = “container row”
 //Resultado en el DOM
-<div id=”contenedor” class=“container row”>
+<div id=”contenedor” class=“container row”
     <h2>Hola mundo!</h2>
 </div> 
 */
@@ -244,9 +248,107 @@ document.body.append(parrafo);
 
 
 /* ---------------------------------------------------------------------- */
+
+                           //ELIMINAR ELEMENTOS
+
+//Se pueden eliminar nodos existentes y nuevos. El método remove() permite eliminar un nodo seleccionado del DOM.
+
+/* 
+let parrafo = document.getElementById("parrafo1");
+//Elminando el propio elemento
+parrafo.remove();
+
+let paises = document.getElementsByClassName("paises");
+//Eliminando el primer elemento de clase paises
+paises[0].remove()
+*/
+
 /* ---------------------------------------------------------------------- */
+
+                          //OBTENER DATOS DE INPUTS
+
+//Para obtener o modificar datos de un formulario HTML desde JS, podemos hacerlo mediante el DOM. Accediendo a la propiedad value de cada input seleccionado.
+
+/* 
+//CODIGO HTML DE REFERENCIA
+<input id = "nombre" type="text">
+<input id = "edad"   type="number">
+
+//CODIGO JS
+document.getElementById("nombre").value = "HOMERO";
+document.getElementById("edad").value   = 39;
+*/
+
 /* ---------------------------------------------------------------------- */
+
+              //EJEMPLO: CREANDO OPCIONES DESDE UN ARRAY
+
+/* 
+//Obtenemos el nodo donde vamos a agregar los nuevos elementos
+let padre = document.getElementById("personas");
+//Array con la información a agregar
+let personas = ["HOMERO","MARGE", "BART", "LISA","MAGGIE"];
+//Iteramos el array con for...of
+for (const persona of personas) {
+    //Creamos un nodo <li> y agregamos al padre en cada ciclo
+    let li = document.createElement("li");
+    li.innerHTML = persona
+    padre.appendChild(li);
+}
+*/
+
 /* ---------------------------------------------------------------------- */
+
+                           //PLANTILLAS DE TEXTO
+
+                           //PLANTILLAS LITERALES
+
+//En versiones anteriores a ES6, solía emplearse la concatenación para incluir valores de las variables en una cadena de caracteres (string). Esta forma puede ser poco legible ante un gran número de referencias. En JS ES6 que solventa esta situación son los template strings.
+
+/* 
+let producto = { id: 1,  nombre: "Arroz", precio: 125 };
+let concatenado = "ID : " + producto.id +" - Producto: " + producto.nombre + "$ "+producto.precio;
+let plantilla   = `ID: ${producto.id} - Producto ${producto.nombre} $ ${producto.precio}`;
+//El valor es idéntico pero la construcción de la plantilla es màs sencilla
+console.log(concatenado);
+console.log(plantilla);
+*/
+
 /* ---------------------------------------------------------------------- */
+
+                      //PLANTILLAS LITERALES E innerHTML
+
+//La plantillas son un medio para incluir variables en la estructura HTML de nodos nuevos o existentes , modificando el innerHTML.
+
+/* 
+let producto   = { id: 1,  nombre: "Arroz", precio: 125 };
+let contenedor = document.createElement("div");
+//Definimos el innerHTML del elemento con una plantilla de texto
+contenedor.innerHTML = `<h3> ID: ${producto.id}</h3>
+                        <p>  Producto: ${producto.nombre}</p>
+                        <b> $ ${producto.precio}</b>`;
+//Agregamos el contenedor creado al body
+document.body.appendChild(contenedor);
+*/
+
 /* ---------------------------------------------------------------------- */
+
+            //EJEMPLO: CREANDO ELEMENTOS DESDE OBJETOS
+
+/* 
+const productos = [{ id: 1,  nombre: "Arroz", precio: 125 },
+                  {  id: 2,  nombre: "Fideo", precio: 70 },
+                  {  id: 3,  nombre: "Pan"  , precio: 50},
+                  {  id: 4,  nombre: "Flan" , precio: 100}];
+
+for (const producto of productos) {
+    let contenedor = document.createElement("div");
+    //Definimos el innerHTML del elemento con una plantilla de texto
+    contenedor.innerHTML = `<h3> ID: ${producto.id}</h3>
+                            <p>  Producto: ${producto.nombre}</p>
+                            <b> $ ${producto.precio}</b>`;
+    document.body.appendChild(contenedor);
+}
+*/
+
 /* ---------------------------------------------------------------------- */
