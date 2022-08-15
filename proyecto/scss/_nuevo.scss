@@ -1,0 +1,50 @@
+/* estilos de compras */
+
+#formulario {
+	display: flex;
+	flex-direction: column;
+	border: 3px, solid, black;
+	width: 250px;
+	height: 200px;
+	margin: 3px;
+	background-color: darksalmon;
+	label {
+		background-color: darksalmon;
+	}
+}
+.iText {
+	background-color: whitesmoke;
+}
+#botones {
+	background-color: bisque;
+}
+#btnSubmit {
+	margin-top: 20px;
+	width: 100px;
+	height: 25px;
+}
+#btnMostrar {
+	margin-top: 20px;
+	width: 100px;
+	height: 25px;
+}
+#conteinerPrincipal {
+	display: flex;
+	flex-direction: row;
+}
+#displayTodos {
+	background-color: goldenrod;
+	margin: 4px;
+	p {
+		background-color: goldenrod;
+		margin: 4px;
+	}
+	strong {
+		background-color: goldenrod;
+		margin: 4px;
+	}
+	h3 {
+		background-color: goldenrod;
+		margin: 4px;
+	}
+}
