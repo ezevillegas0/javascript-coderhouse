@@ -134,48 +134,52 @@ div ul li a:hover {
     transform: translateY(-100px); } }
 
 /* estilos de compras */
+#conteinerPrincipal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
 #formulario {
   display: flex;
   flex-direction: column;
-  border: 3px, solid, black;
-  width: 250px;
-  height: 200px;
-  margin: 3px;
-  background-color: darksalmon; }
+  width: 16rem;
+  height: 13rem;
+  padding: 5px;
+  background-color: #666466; }
   #formulario label {
-    background-color: darksalmon; }
+    background-color: #bebebe; }
 
 .iText {
-  background-color: whitesmoke; }
+  background-color: #efefef; }
 
 #botones {
-  background-color: bisque; }
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  padding: 3px; }
 
 #btnSubmit {
-  margin-top: 20px;
-  width: 100px;
-  height: 25px; }
+  margin: auto;
+  width: 6.25rem;
+  height: 1.56rem; }
 
 #btnMostrar {
-  margin-top: 20px;
-  width: 100px;
-  height: 25px; }
-
-#conteinerPrincipal {
-  display: flex;
-  flex-direction: row; }
+  margin: auto;
+  width: 6.25rem;
+  height: 1.56rem; }
 
 #displayTodos {
-  background-color: goldenrod;
-  margin: 4px; }
+  background-color: #bebebe;
+  margin: 4px;
+  border-radius: 1rem; }
   #displayTodos p {
-    background-color: goldenrod;
+    background-color: #bebebe;
     margin: 4px; }
   #displayTodos strong {
-    background-color: goldenrod;
+    background-color: #bebebe;
     margin: 4px; }
   #displayTodos h3 {
-    background-color: goldenrod;
+    background-color: #bebebe;
     margin: 4px; }
 
 /* GENERALES */
