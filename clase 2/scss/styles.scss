@@ -16,7 +16,6 @@
     margin:map-get($medidas, 0);
     padding:map-get($medidas, 0);
     box-sizing: border-box;
-
 }
 
 .contenedorGrid {
@@ -28,7 +27,6 @@
         "barraNavegacion"
         "main"
         "footer"
-
 }
 
 
@@ -38,7 +36,6 @@ html {
     margin-left: 17%;
     margin-right: 17%;
     background-attachment: fixed;
-
 }
 
 body{
@@ -54,21 +51,17 @@ p {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     font-size: 1.3rem;
-
-
 }
 
 
 .titulo {
     text-align: center;
     font-size: 2.25rem;
-
 }
 
 .tituloSecundario {
     text-align: center;
     font-size: 1.56rem;
-
 }
 
 
