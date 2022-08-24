@@ -140,7 +140,7 @@ localStorage[clave] = "6"; //No se guarda este dato
                           //CONVERSIONES DE/HACIA JSON
 
 // Cuando sea necesario enviar un objeto Javascript al servidor o almacenarlo en storage, será necesario convertirlo a un JSON (una cadena) antes de ser enviado.
-//Cuando sea necesario enviar un objeto Javascript al servidor o almacenarlo en storage, será necesario convertirlo a un JSON (una cadena) antes de ser enviado.
+
 
 //stringify. acepta un objeto como parámetro, y devuelve la forma de texto JSON equivalente.
 
@@ -225,3 +225,16 @@ if (usuarioEnLS) {
     usuario = prompt(‘Ingrese su nombre de usuario’)
 }
 */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+//import
+
+//se utiliza para traer cosas de otro archivo de javascript.
+
+/* -------------------------------------------------------- */
+
+//export
+
+//se usa para habilitar usar esas cosas en otro archivo.
