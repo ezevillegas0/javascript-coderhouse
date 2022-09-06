@@ -113,7 +113,31 @@
 
            <div id="products" class="products"></div>
 
-
+           <div id="conteinerPrincipal">
+               <div>
+                   <form id="formulario">
+                       <label> Email: </label>
+                       <input class="iText" type="email" name="email" id="iEmail" placeholder="email">
+   
+                       <label> Comic deseado: </label>
+                       <input class="iText" type="text" name="nombre" id="iComic" placeholder="nombre del comic">
+   
+                       <label> Cantidad: </label>
+                       <input class="iText" type="number" name="password" id="iPassword" placeholder="cantidad">
+                       <div id="botones">
+                           <input type="submit" id="btnSubmit" id="" value="Confirmar">
+                           <input type="button" id="btnMostrar" id="" value="Mostrar Todos">
+                       </div>
+                  </form>
+                   <div id="comicIngresado">
+   
+                   </div>
+               </div>
+               <div id="displayTodos">
+                
+               </div>
+            </div>
+           
         
 
 
@@ -148,6 +172,8 @@
     
     <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../SRC/main.js"></script>
-  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../SRC/sweetAlert.js"></script>
+</body>
 
 </html>

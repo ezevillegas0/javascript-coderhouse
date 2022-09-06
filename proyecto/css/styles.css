@@ -184,14 +184,16 @@ div ul li a:hover {
 
 /* dfgniodgosnjdjosnggnjd */
 
+
 .products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, auto));
   grid-gap: 50px;
   margin: 50px auto;
-  max-width: 1240px;
+  max-width: 1240px; 
   padding: 20px;
 }
+
 
 .product{
   padding: 10px;
