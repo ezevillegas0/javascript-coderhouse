@@ -1,0 +1,44 @@
+[
+    {
+        "image" : "../assets/batman año uno.jpg",
+        "title" : "Batman año uno",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    },
+
+    {
+        "image" : "../assets/vengadores desunidos.jpg",
+        "title" : "Vengadores desunidos",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    },
+
+    {
+        "image" : "../assets/portada amazing.webp",
+        "title" : "Amazing fantasy",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    },
+
+    {
+        "image" : "../assets/batman año uno.jpg",
+        "title" : "Batman año uno",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    },
+
+    {
+        "image" : "../assets/vengadores desunidos.jpg",
+        "title" : "Vengadores desunidos",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    },
+
+    {
+        "image" : "../assets/portada amazing.webp",
+        "title" : "Amazing fantasy",
+        "description" : "  Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price" : "4,99"
+    }
+
+]

@@ -253,7 +253,7 @@ En el objeto de configuración tenemos varias propiedades a definir:
 
 //Nótese que debe estar escrito con el formato json válido. Ahora al momento de cargar la aplicación, podemos llamar a este archivo con fetch y generar una vista de forma asincrónica:
 
-/* 
+
 const lista = document.querySelector('#listado')
 
 fetch('/data.json')
@@ -274,7 +274,7 @@ fetch('/data.json')
     })
 
 //Al ser un archivo local la respuesta es casi inmediata, pero sigue siendo un proceso asincrónico 🤯
-*/
+
 
 /* ---------------------------------------------------------------------- */
 
@@ -299,7 +299,7 @@ console.log(resp) // Response
 async function pedirPosts() { }
 // o bien
 const pedirPosts = async () => { }
-
+createElement
 //Así, dentro de una función async podemos utilizar la sentencia await vista previamente. Esto nos permite esperar a que se resuelvan las promesas vistas para continuar con la instrucción siguiente. 
 
 //El resultado es una sintaxis que se asemeja a la escritura sincrónica tradicional. Obtenemos el mismo resultado que antes, pero con una sintaxis más clara 👌 El async-await funcionan de la mano. Recordamos que es una herramienta adicional que puede facilitar la escritura, no es una obligación.
@@ -324,3 +324,4 @@ pedirPosts()
 
 
 /* ---------------------------------------------------------------------- */
+ 
