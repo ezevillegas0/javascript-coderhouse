@@ -1,145 +1,81 @@
-const lista = document.getElementById('products')
+let carrito = [];
 
-fetch('../SRC/data.json')
-  .then( (res) => res.json())
-  .then( (data) => {
+class ProductoCarrito{
 
+    constructor(nombre, precio, imagen, cantidad, id){
 
-    data.forEach(item => {
-        const div = document.createElement('div')
-        div.className = "product"
-        div.innerHTML = `
-        <img src="${item.image}" alt="${item.description}">
-        <p class="title">${item.title}</p>
-        <p class="description">${item.description}</p>
-        <p class="price">
-           <span>$</span>
-           <span>${item.price}</span>
-        </p>
-        <p class="cart">Add to cart <i class="bx bx-cart-alt"></i></p>
-    `;
-
-    lista.append(div)
-    });
-
-}) 
-
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-/* ------------------------------------------------------------- */
-
-
-class Compra {
-  constructor(email, comic, cantidad){
-      this.email = email;
-      this.comic = comic;
-      this.cantidad = cantidad;
-  }
+        this.nombre = nombre;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.cantidad = 1;
+        this.id = id; 
+    }
 }
 
-//Variables para trabajar en DOM
+let divContainer = document.getElementById("row")
 
-let arrayCompras = []; 
-let miFormulario = document.querySelector("#formulario");
-let inputComic = document.querySelector("#iComic");
+function rellenarPagina(arrayProductos){
 
-//ver xq no funciona
+    for(let producto of arrayProductos){
 
-let emailI = formulario.children[1].value;
-let comicI = formulario.children[3].value;
-let cantidadI = formulario.children[5].value;
+        let div = document.createElement("div")
+        div.classList = "col-4 mt-3"
 
-//genero variables que voy a usar
+        div.innerHTML = `  
+        <div class="card" style="width: 18rem;">
+            <img src="${producto.imagen}" class="card-img-top" alt="${producto.id}"> 
+            <div class="card-body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">$ <strong>${producto.precio}</strong></p>
+                <button class="btn btn-primary anadirCarrito">Añadir al carrito</button>
+            </div>
+        </div> `
 
-let contenedor = document.querySelector("#comicIngresado");
-let displayTodos = document.querySelector("#displayTodos");
-let parrafos = displayTodos.getElementsByTagName("p");
-let bandera = false;
-
-//eventos en botones
-
-miFormulario.addEventListener("submit", agregarCompras);
-btnMostrar.addEventListener("click", MostrarTodasCompras);
-
-inputComic.focus();
-
-// funcion = comprobar ingreso de datos
-
-function validarForm () {
-  emailI = formulario.children[1].value;
-  comicI = formulario.children[3].value;
-  cantidadI = formulario.children[5].value;
-  
-  if (emailI== `` || comicI == `` || cantidadI == ``){
-      Swal.fire({
-          icon: 'error',
-          title: 'Ups...',
-          text: 'debes ingresar todos los datos para continuar',
-          background: "#bebebe",
-          backdrop: true,
-      });
-      inputComic.focus();
-      bandera = false;
-  } else {
-      bandera = true;
-  }
-
-  const compra1 = [ {id :1, email: emailI , comic: comicI , cantidad: cantidadI}];
-  const enJSON = JSON.stringify(compra1);
-
-  localStorage.setItem("primer compra", enJSON);
+        divContainer.appendChild(div)
+    }
 
 }
 
-// funcion = agregar compras
+rellenarPagina(productos)
 
-function agregarCompras(e) {
-  e.preventDefault ();
-  validarForm(); 
-  if (bandera == true) {
-      Swal.fire({
-          icon: 'success',
-          title: 'Genial!',
-          text: 'Usted va a realizar una compra',
-          background: "#bebebe",
-          backdrop: true,
-      }); 
-      formulario.children[1].value = ``;
-      formulario.children[3].value = ``;
-      formulario.children[5].value = ``;
-      contenedor.innerHTML = ``;
-      AgregarAlDom();
-      inputComic.focus();
-  } else {
-      inputComic.focus();
-  }
-}
+let botones = document.querySelectorAll(".anadirCarrito");
 
-// funcion = mostrar en el DOM el ultimo ingreso
+botones.forEach(elemento => {
+    elemento.addEventListener("click", anadirCarrito)
+})
 
-function AgregarAlDom() {
-  contenedor.innerHTML = `<h3> Ultimo pedido: </h3>
-  <p><strong> Email: </strong> ${emailI}</p>
-  <p><strong> Comic: </strong> ${comicI}</p>
-  <p><strong> Cantidad: </strong> ${cantidadI}</p>`;
-}
+function anadirCarrito(e){
 
-// funcion = mostrar todas los pedidos en un div del DOM
+    let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
 
-function MostrarTodasCompras(e) {
-  e.preventDefault();
-  let i =0;
-  displayTodos.innerHTML = `<h3> Listado de todos las compras</h3>`;
-  for (const Compras of arrayCompras){    
-      displayTodos.innerHTML += `
-      <p><strong> Email: </strong> ${Compras.email}</p>
-      <p><strong> Comic: </strong> ${Compras.comic}</p>
-      <p><strong> Cantidad: </strong> ${Compras.cantidad}</p> <hr> `;
-  }
+    if(carritoLocalStorage){
+        carrito = carritoLocalStorage;
+    }
+
+    //console.log(e.target.parentNode.parentNode.children[0].alt)
+
+   let index = carrito.findIndex(producto => producto.id == e.target.parentNode.parentNode.children[0].alt)
+
+   console.log(index)
+   console.log(carrito)
+
+    let nombre = e.target.parentNode.children[0].textContent;
+    let precio = e.target.parentNode.children[1].children[0].textContent;
+    let imagen = e.target.parentNode.parentNode.children[0].src;
+    let id = e.target.parentNode.parentNode.children[0].alt;
+
+    if(index == -1){
+        const producto = new ProductoCarrito(nombre, precio, imagen, id);
+        carrito.push(producto);
+    }
+
+    
+
+    
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
 }
 
 
-
-
+/* console.log(productos) */
