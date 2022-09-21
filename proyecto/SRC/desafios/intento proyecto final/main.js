@@ -52,8 +52,6 @@ function anadirCarrito(e){
         carrito = carritoLocalStorage;
     }
 
-    //console.log(e.target.parentNode.parentNode.children[0].alt)
-
    let index = carrito.findIndex(producto => producto.id == e.target.parentNode.parentNode.children[0].alt)
 
    console.log(index)
@@ -67,6 +65,8 @@ function anadirCarrito(e){
     if(index == -1){
         const producto = new ProductoCarrito(nombre, precio, imagen, id);
         carrito.push(producto);
+    }else{
+        carrito[index].cantidad++;
     }
 
     

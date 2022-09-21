@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 1200,
+      "id": 1,
+      "title": "Amazing Fantazy",
+      "img": "../assets/carrito/amazing.carrito.webp"
+    },
+    {
+      "precio": 999,
+      "id": 2,
+      "title": "Batman",
+      "img": "../assets/carrito/batman.carrito.jpg"
+    },
+    {
+      "precio": 699,
+      "id": 3,
+      "title": "Superman",
+      "img": "../assets/carrito/superman.carrito.jpg"
+    },
+    {
+      "precio": 799,
+      "id": 4,
+      "title": "Thor",
+      "img": "../assets/carrito/thor.carrito.jpg"
+    },
+    {
+      "precio": 1150,
+      "id": 5,
+      "title": "Vengadores",
+      "img": "../assets/carrito/vengadores.carrito.jpg"
+    },
+    {
+      "precio": 699,
+      "id": 6,
+      "title": "Watchmen",
+      "img": "../assets/carrito/watchmen.carrito.jpg"
+    }
+  ]
